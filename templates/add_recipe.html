@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<nav class="nav1">
+    <ul class="nav justify-content-right">
+        <li class="nav-item">
+          <br><br><br>
+          <a class="nav-link active" href="{{ url_for('home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <br><br><br>
+          <a class="nav-link" href="{{ url_for('index')}}">Your Recipes</a>
+        </li>
+      </ul>
+</nav>
+<hr>
+
+<form class ="forms" method="POST" action="{{ url_for('add_recipe') }}">
+    <center>
+    <table id="table1">
+    <tr><h1 style="margin-left: -5%; font-family: 'Courier New', Courier, monospace; color: olive; font-weight: 900" id="title_of_edit">Create your Recipe here</h1><td></td></td></tr><br>
+    <td style="padding: 5px;font-size:20px;" >Name of the Dish:</td>
+    <td><textarea id="title" name="title" class="title1" cols="50" rows="1" required></textarea></td></tr>
+    <br>
+    <td style="padding: 5px;font-size:20px;">Ingredients:</td>
+    <td><textarea id="ingredients" class="ingredients1" name="ingredients" cols="80" rows="3" required></textarea></td></tr>
+    <td style="padding: 5px;font-size:20px;">Instructions:</td>
+    <td><textarea id="instructions" class="instructions1" name="instructions" cols="80" rows="3" required></textarea></td></tr>
+    </table>
+    <br>
+    <button type="submit">Submit</button>
+    </center>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+body {
+  margin-bottom: 250px;
+}
+
+.header {
+  position: fixed;
+  background: darkcyan;
+  top: 0px;
+  width: 100%;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+h1 {
+  margin-left: 15%;
+}
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: maroon;
+  font-weight: 900;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: darkcyan;
+  text-align: center;
+
+}
+
+.footer p {
+  color: #fff;
+}

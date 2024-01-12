@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% block content %}
+
+    <nav class="nav1">
+        <ul class="nav justify-content-right">
+            <a style="margin-right:5rem"></a>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index')}}">Edit your Recipe</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('add_recipe')}}">Add your Recipe</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <form class ="forms" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe.id) }}">
+        <center>
+        <table id="table1">
+        <br><br>
+        <h2>Edit your Recipe</h2>
+        <td style="padding: 5px;font-size:20px;" >Name:</td>
+        <td><textarea id="title" name="title" class="title1" cols="50" rows="1" required>{{ recipe.title }}</textarea></td></tr>
+        <br>
+        <tr><td style="padding: 5px;font-size:20px;">Ingredients:</td>
+        <td><textarea id="ingredients" class="ingredients1" name="ingredients" cols="80" rows="3" required>{{ recipe.ingredients }}</textarea></td></tr>
+        <tr><td style="padding: 5px;font-size:20px;">Instructions:</td>
+        <td><textarea id="instructions" class="instructions1" name="instructions" cols="80" rows="3" required>{{ recipe.instructions }}</textarea></td></tr>
+        </table>
+        <br>
+        <button type="submit">Submit</button>
+        </center>
+
+    </form>
+
+
+{% endblock %}
